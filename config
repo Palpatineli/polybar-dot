@@ -1,0 +1,66 @@
+[theme]
+launcher-bg = ${color.shade1}
+title-bg = ${color.shade2}
+workspace-bg = ${color.shade3}
+alsa-bg = ${color.shade5}
+
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+include-file = ~/.config/polybar/themes/nord.ini
+include-file = ~/.config/polybar/modules/launcher.ini
+include-file = ~/.config/polybar/modules/title.ini
+include-file = ~/.config/polybar/modules/bspwm.ini
+include-file = ~/.config/polybar/modules/sep-powerline.ini
+include-file = ~/.config/polybar/modules/alsa.ini
+include-file = ~/.config/polybar/modules/usb.ini
+include-file = ~/.config/polybar/modules/battery.ini
+include-file = ~/.config/polybar/modules/wireless.ini
+include-file = ~/.config/polybar/modules/wired.ini
+include-file = ~/.config/polybar/modules/date.ini
+include-file = ~/.config/polybar/modules/sysmenu.ini
+
+[bar/main]
+; some monitors don't show up as connected
+monitor-strict = false 
+override-redirect = false
+bottom = true
+fixed-center=true
+width = 100%
+height = 24
+
+background = ${color.tr}
+foreground = ${color.fg}
+
+underline-size = 2
+underline-color = ${color.fg}
+
+padding = 0
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "Iosevka Nerd Font:pixelsize=10;3"
+font-1 = "Iosevka Nerd Font:style=Medium:pixelsize=22;5"
+
+modules-left = launcher left1 title left2 workspace left3
+modules-right = right5 alsa right4 battery right3 wireless wired right2 date right1 sysmenu
+
+separator =
+dim-value = 1.0
+wm-name = bspwm
+locale = en_US.UTF-8
+tray-position = none
+tray-detached = false
+
+enable-ipc = true
+
+[settings]
+throttle-output = 5
+throttle-output-for = 10
+screenchange-reload = true
+compositing-background = source
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+pseudo-transparency = false

@@ -1,0 +1,14 @@
+* {
+  al:  #00000000;
+  bg:  #000000ff;
+  se:  #101010ff;
+  fg:  #FFFFFFff;
+  ac:  #42A5F5ff;
+  accent:           #5294E2;
+  background:       #FFFFFF;
+  background-light: #E7E8EB;
+  foreground:       #333333;
+  on:               #44ad4d;
+  off:              #e34039;
+}
+
