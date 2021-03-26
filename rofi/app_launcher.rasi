@@ -26,50 +26,53 @@ window {
     background-color:               @bg;
     text-color:                     @fg;
 	border:							0px;
-	border-color:					@ac;
-    border-radius:                  2px;
+	border-color:					@teal;
+    border-radius:                  0px;
 	width:							18%;
-    location:                       northwest;
-    x-offset:                       5;
-    y-offset:                       24;
+    location:                       southwest;
+    anchor:                         southwest;
+    x-offset:                       0;
+    y-offset:                       -30;
 }
 
 prompt {
     enabled: 						true;
-	padding: 						0.30% 1% 0% -0.5%;
-	background-color: 				@al;
+	padding: 						0.50% 0.8% 0% 0%;
+	background-color: 				@shade5;
 	text-color: 					@bg;
+    border:                         0px;
 	font:							"FantasqueSansMono Nerd Font 12";
 }
 
 entry {
-    background-color:               @al;
+    background-color:               @shade5;
     text-color:                     @bg;
-    placeholder-color:              @bg;
+    placeholder-color:              @shade5;
+    border:                         0px;
     expand:                         true;
     horizontal-align:               0;
     placeholder:                    "Search";
-    padding:                        0.10% 0% 0% 0%;
+    padding:                        0.20% 0% 0% 0%;
     blink:                          true;
 }
 
 inputbar {
 	children: 						[ prompt, entry ];
-    background-color:               @ac;
+    background-color:               @shade5;
     text-color:                     @bg;
     expand:                         false;
 	border:							0% 0% 0% 0%;
     border-radius:                  0px;
-	border-color:					@ac;
+	border-color:					@fg;
     margin:                         0% 0% 0% 0%;
-    padding:                        1.5%;
+    padding:                        0.5%;
 }
 
 listview {
-    background-color:               @al;
+    background-color:               @bg;
     padding:                        0px;
     columns:                        1;
-    lines:                          5;
+    lines:                          15;
     spacing:                        0%;
     cycle:                          false;
     dynamic:                        true;
@@ -77,25 +80,25 @@ listview {
 }
 
 mainbox {
-    background-color:               @al;
+    background-color:               @bg;
 	border:							0% 0% 0% 0%;
     border-radius:                  0% 0% 0% 0%;
-	border-color:					@ac;
-    children:                       [ inputbar, listview ];
+	border-color:					@teal;
+    children:                       [ listview, inputbar ];
     spacing:                       	0%;
     padding:                        0%;
 }
 
 element {
-    background-color:               @al;
-    text-color:                     @fg;
+    background-color:               @bg;
+    text-color:                     @cyan;
     orientation:                    horizontal;
     border-radius:                  0%;
     padding:                        1% 0.5% 1% 0.5%;
 }
 
 element-icon {
-    size:                           32px;
+    size:                           16px;
     border:                         0px;
 }
 
@@ -107,7 +110,7 @@ element-text {
 }
 
 element selected {
-    background-color:               @se;
+    background-color:               @shade2;
     text-color:                     @fg;
 	border:							0% 0% 0% 0%;
     border-radius:                  0px;

@@ -1,13 +1,26 @@
+[color]
+include-file = ~/.config/polybar/themes/nord.ini
+
 [theme]
-launcher-bg = ${color.shade1}
+fg = ${color.cyan}
+bg = ${color.tr}
+launcher-bg = ${color.shade0}
+workspace-fg = ${color.cyan}
+workspace-bg = ${color.shade1}
+workspace-dim = ${color.blue}
 title-bg = ${color.shade2}
-workspace-bg = ${color.shade3}
-alsa-bg = ${color.shade5}
+
+sysmenu-bg = ${color.shade0}
+date-bg = ${color.shade1}
+network-bg = ${color.shade2}
+battery-bg = ${color.shade3}
+alsa-fg = ${color.blue}
+alsa-bg = ${color.shade4}
+alsa-mute = ${color.purple}
 
 [global/wm]
 margin-bottom = 0
 margin-top = 0
-include-file = ~/.config/polybar/themes/nord.ini
 include-file = ~/.config/polybar/modules/launcher.ini
 include-file = ~/.config/polybar/modules/title.ini
 include-file = ~/.config/polybar/modules/bspwm.ini
@@ -29,8 +42,8 @@ fixed-center=true
 width = 100%
 height = 24
 
-background = ${color.tr}
-foreground = ${color.fg}
+background = ${theme.bg}
+foreground = ${theme.fg}
 
 underline-size = 2
 underline-color = ${color.fg}
@@ -39,10 +52,11 @@ padding = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = "Iosevka Nerd Font:pixelsize=10;3"
-font-1 = "Iosevka Nerd Font:style=Medium:pixelsize=22;5"
+font-0 = "Iosevka Term:pixelsize=10;3"
+font-1 = "Iosevka Term:style=Medium:pixelsize=24;7"
+font-2 = "Iosevka Term:style=Medium:pixelsize=16;5"
 
-modules-left = launcher left1 title left2 workspace left3
+modules-left = launcher left1 workspace left2 title left3
 modules-right = right5 alsa right4 battery right3 wireless wired right2 date right1 sysmenu
 
 separator =

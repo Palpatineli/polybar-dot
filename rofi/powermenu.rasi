@@ -8,18 +8,18 @@
  */
 
 configuration {
-	font:                      		"Comfortaa 12";
+	font:                      		"Iosevka Nerd Font 12";
     disable-history:                false;
     fullscreen:                     false;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
 }
 
-@import "../../../styles/colors.rasi"
+@import "colors.rasi"
 
 * {
-    background-color:               @background;
-    text-color:                     @foreground;
+    background-color:               @bg;
+    text-color:                     @fg;
 }
 
 window {
@@ -27,37 +27,37 @@ window {
     border-radius:                  0px;
     location:                       southeast;
 	width:							420px;
-    x-offset:                       -15px;
-    y-offset:                       -45px;
+    x-offset:                       -1px;
+    y-offset:                       -29px;
 }
 
 prompt {
     enabled: 						true;
     padding:                        10px;
-	background-color: 				@background-light;
-	text-color: 					@accent;
+	background-color: 				@shade2;
+	text-color: 					@cyan;
     border:                  		2px 2px 2px 2px;
     border-radius:                  0px;
-    border-color:                  	@accent;
+    border-color:                  	@cyan;
 }
 
 textbox-prompt-colon {
 	expand: 						false;
 	str: 							" System ";
-	background-color: 				@accent;
-	text-color: 					@background;
+	background-color: 				@cyan;
+	text-color: 					@bg;
     padding:                        12px 10px 0px 10px;
 }
 
 inputbar {
 	children: 						[ textbox-prompt-colon, prompt ];
     spacing:                        0px;
-    background-color:               @background;
-    text-color:                     @foreground;
+    background-color:               @bg;
+    text-color:                     @fg;
     expand:                         false;
     border:                  		0px;
     border-radius:                  0px;
-    border-color:                  	@accent;
+    border-color:                  	@cyan;
     margin:                         0px 0px 0px 0px;
     padding:                        0px;
     position:                       center;
@@ -73,15 +73,15 @@ listview {
 }
 
 mainbox {
-    background-color:               @background;
+    background-color:               @bg;
     children:                       [ inputbar, listview ];
     spacing:                        12px;
     margin:                         12px;
 }
 
 element {
-    background-color:               @background-light;
-    text-color:                     @foreground;
+    background-color:               @shade2;
+    text-color:                     @fg;
     orientation:                    vertical;
     border-radius:                  0px;
 }
@@ -96,31 +96,31 @@ element-text {
 
 element normal.urgent,
 element alternate.urgent {
-    background-color:               @off;
-    text-color:                     @background;
+    background-color:               @blue;
+    text-color:                     @bg;
     border-radius:                  0px;
 }
 
 element normal.active,
 element alternate.active {
-    background-color:               @on;
-    text-color:                     @background;
+    background-color:               @cyan;
+    text-color:                     @bg;
 }
 
 element selected {
-    background-color:               @accent;
-    text-color:                     @background;
+    background-color:               @cyan;
+    text-color:                     @bg;
     border:                  		0px;
     border-radius:                  0px;
-    border-color:                  	@border;
+    border-color:                  	@teal;
 }
 
 element selected.urgent {
-    background-color:               @on;
-    text-color:                     @background;
+    background-color:               @cyan;
+    text-color:                     @bg;
 }
 
 element selected.active {
-    background-color:               @off;
-    color:                          @background;
+    background-color:               @blue;
+    color:                          @bg;
 }

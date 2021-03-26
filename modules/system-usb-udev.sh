@@ -35,7 +35,7 @@ usb_print() {
 }
 
 usb_update() {
-    pid=$(pgrep -xf "/bin/sh "${HOME}"/.config/polybar/system-usb-udev.sh")
+    pid=$(pgrep -xf "/bin/sh "${HOME}"/.config/polybar/modules/system-usb-udev.sh")
 
     if [ "$pid" != "" ]; then
         kill -10 "$pid"

@@ -1,8 +1,26 @@
 * {
+    bg:     #2E3440;
+    fg:     #ECEFF4;
+    shade0: #2E3440;
+    shade1: #3B4252;
+    shade2: #434C5E;
+    shade3: #4C566A;
+    shade4: #D8DEE9;
+    shade5: #E5E9F0;
+    shade6: #ECEFF4;
+
+    teal: #8FBCBB;
+    cyan: #88C0D0;
+    lightblue: #81A1C1;
+    blue: #5E81AC;
+
+    red: #BF616A;
+    orange: #D08770;
+    yellow: #EBCB8B;
+    green: #A3BE8C;
+    purple: #B48EAD;
   al:  #00000000;
-  bg:  #000000ff;
   se:  #101010ff;
-  fg:  #FFFFFFff;
   ac:  #42A5F5ff;
   accent:           #5294E2;
   background:       #FFFFFF;

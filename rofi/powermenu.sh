@@ -9,8 +9,8 @@ dir="$HOME/.config/polybar/rofi/"
 rofi_command="rofi -theme $dir/powermenu.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
-cpu=$(sh ~/.config/rofi/bin/usedcpu)
-memory=$(sh ~/.config/rofi/bin/usedram)
+cpu=$(sh ~/.config/polybar/bin/usedcpu)
+memory=$(sh ~/.config/polybar/bin/usedram)
 
 # Options
 shutdown=""
@@ -25,7 +25,7 @@ confirm_exit() {
 		-i\
 		-no-fixed-num-lines\
 		-p "Are You Sure? : "\
-		-theme $HOME/.config/rofi/applets/styles/confirm.rasi
+		-theme $HOME/.config/polybar/rofi/confirm.rasi
 }
 
 # Message
